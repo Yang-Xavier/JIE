@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>localResizeIMG3</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="mobileFix.js"></script>
+    <script src="exif.js"></script>
+    <script src="LocalResizeIMG.js"></script>
+    <script>
+//        var input = document.querySelector('#FILE');
+//
+//        input.onchange = function(){
+//            localResizeIMG(this.files[0], {width: 400}, function(res){
+//                console.log(res.base64);
+//                var node = document.createElement('img');
+//                node.src = res.base64;
+//                document.body.insertBefore(node,input);
+//                input.value='';
+//            });
+//        }
+$(function(){
+    $("input:file").change(function(){
+        localResizeIMG(this.files[0],{},
+        function(res){
+            var img=new Image();
+            img.src=res.base64;
+            $(document.body).append(img);
+            console.log(res.base64.length);
+        }
+        )
+    })
+
+})
+
+    </script>
+</head>
+<body>
+
+<input type="file" id="FILE">
+
+
+</body>
+</html>

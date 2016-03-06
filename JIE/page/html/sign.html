@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width ,height = device-height ,initial-scale = 1,minimum-scale = 1, maximum-scale = 1, user-scalable =no,">
+    <title>sign</title>
+
+    <!--<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.css"/>-->
+    <link rel="stylesheet" href="../../style/download/jquery.mobile-1.4.5.css">
+    <link rel="stylesheet" href="../../style/sign.css">
+    <link rel="stylesheet" href="">
+
+    <script src="../../script/download/MD5.js"></script>
+    <script src="http://apps.bdimg.com/libs/angular.js/1.5.0-beta.0/angular.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js"></script>
+    <script src="../../script/sign.js"></script>
+    <script src=""></script>
+
+</head>
+<body>
+<!--------------------------------page1-------------------------->
+<div data-role="page" id="page1" data-theme="a">
+    <div data-role="header" data-theme="b">
+        <h1 class="h" >欢迎注册!</h1>
+    </div>
+    <div data-role="content">
+        <label for="tel" >手机号</label>
+        <input type="text" id="tel">
+
+        <div style="text-align: center">
+            <label id="phoneError" style="color: red;display: none;"></label>
+        </div>
+
+        <label for="code">验证码</label>
+        <div class="ui-grid-p1">
+            <div class="ui-block-pa">
+                <input type="text" id="code" >
+            </div>
+            <div class="ui-block-pb">
+                <button style=" padding: 8px 0 8px 0" id="send_code">发送验证码</button>
+            </div>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed" data-theme="b">
+        <!--<h1>底部</h1>-->
+            <div data-role="navbar">
+                <ul>
+                    <li><button data-icon="user" id="login">登录</button></li>
+                    <li></li>
+                    <li></li>
+                    <li><button data-icon="arrow-r" id="next1">下一步</button></li>
+                </ul>
+            </div>
+    </div>
+
+</div>
+<!--------------------------page 2--------------------------------->
+<div data-role="page" id="page2" data-theme="a">
+    <div data-role="header" data-theme="b">
+        <h1 id="" class="h" >完善资料..1/2</h1>
+    </div>
+
+        <div data-role="content">
+            <label for="tname">真实姓名</label>
+            <input type="text" id="tname">
+
+            <div style="text-align: center">
+                <label id="nameError" style="color: red;display: none;"></label>
+            </div>
+
+            <div align="left">
+                <label for="">性别</label>
+                <!--<fieldset data-role="controlgroup" data-type="horizontal" id="fl"  align="left" >-->
+                    <label for="male" ><p>男性</p></label>
+                    <input type="radio" name="gender" id="male"  value="男" checked >
+                    <label for="female" ><p>女性</p></label>
+                    <input type="radio" name="gender" id="female"  value="女" >
+                <!--</fieldset>-->
+            </div>
+            <label for="age">年龄</label>
+            <input type="number" id="age" name="age">
+
+            <div style="text-align: center">
+                <label id="ageError" style="color: red;display: none;"></label>
+            </div>
+
+            <label for="email">邮箱<c style="color: red">（用于找回密码）</c></label>
+            <input type="email" id="email">
+
+            <div style="text-align: center">
+                <label id="emailError" style="color: red;display: none;"></label>
+            </div>
+
+
+            <label for="edu" >学历</label>
+            <!----------angularJS------------->
+            <div data-ng-app="getSchool" data-ng-controller="getSchoolCtrl">
+                <select id="edu" ng-change="addOther(x)" data-ng-model="x">
+                    <option></option>
+                    <option >小学</option>
+                    <option >初中</option>
+                    <option >高中</option>
+                    <option >大学</option>
+                    <option >其它</option>
+                </select>
+                <div id="other" class="other">
+                    <input type="text" name="other_input" id="other_input" placeholder="请输入..">
+                </div>
+                <div class="school_d" id="school_d" >
+                    <label for="school" >学校</label>
+                    <select id="school" data-ng-model="selectSchool" data-ng-options="school.schoolName for school in schools">
+                    </select>
+                </div>
+            </div>
+
+            <!--------------------------------->
+    </div>
+
+    <div data-role="footer" data-position="fixed" data-theme="b">
+        <!--<h1>底部</h1>-->
+        <div data-role="navbar">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li><button data-icon="arrow-r" id="next2" >下一步</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-----------------------page3------------------------------>
+<div data-role="page" id="page3" data-theme="a">
+    <div data-role="header" data-theme="b">
+        <h1 id="" class="h" >完善资料..2/2</h1>
+    </div>
+    <div data-role="content">
+        <label for="">用户名</label>
+        <input type="text" id="userName">
+
+        <div style="text-align: center">
+            <label id="userError" style="color: red;;display: none;"></label>
+        </div>
+
+
+        <label for="password">密码</label>
+        <input type="password " id="password">
+        <label for="resure">确认密码</label>
+        <input type="password" id="resure">
+
+        <div style="text-align: center">
+            <label id="pwdError" style="color: red;display: none;"></label>
+        </div>
+
+    </div>
+    <div data-role="footer" data-position="fixed" data-theme="b">
+        <!--<h1>底部</h1>-->
+        <div data-role="navbar">
+            <ul>
+                <li><button data-icon="arrow-l"  id="reserve2">上一步</button></li>
+                <li></li>
+                <li></li>
+                <li><button data-icon="arrow-r"  id="sub">完成！</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>

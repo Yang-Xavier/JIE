@@ -1,0 +1,10 @@
+label{
+    padding: 10px 0 0 0;
+}
+
+.other,.school_d,.edu_d,#cancel{
+    display: none;
+}
+#edit_sub,#cancel{
+    text-align: center;
+}

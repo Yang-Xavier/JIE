@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width ,height = device-height ,initial-scale = 1,minimum-scale = 1, maximum-scale = 1, user-scalable =no,">
+    <title>teacher_info</title>
+
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.css"/>
+    <link rel="stylesheet" href="../../style/download/jquery.mobile-1.4.5.css">
+    <link rel="stylesheet" href="../../style/teacher_info.css">
+    <link rel="stylesheet" href="">
+
+    <script src="http://apps.bdimg.com/libs/angular.js/1.5.0-beta.0/angular.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js"></script>
+    <script src="../../script/download/iscroll.js"></script>
+    <script src="../../script/download/iscroll-probe.js"></script>
+    <script src="../../script/teacher_info.js"></script>
+    <script src=""></script>
+
+</head>
+<!--可以用angularJS    以及 iscroll-->
+<body>
+<div data-role="page" id="pageone">
+    <div data-role="header" data-theme="b" id="header">
+        <h1>家教信息</h1>
+    </div>
+    <div id="teacher_phone" style="display: block;width: 100%;height: 100px;z-index: 1000;background-color: black;position: absolute; opacity:0.8;font-size: 20px;color: white">
+        <div>手机：</div>
+        <div>15096629921</div>
+        <div>邮箱：</div>
+        <div>576694940@qq.com</div>
+        <script>
+//            alert($(document.body).height()-$("#footer").height()-$("#header").height()-200+"px");
+            $("#teacher_phone").css("margin-top",$(document.body).height()-$("#footer").height()-$("#header").height()-200+"px");
+            $("#teacher_phone").css("display","none");
+        </script>
+    </div>
+    <div id="content">
+        <div id="scroll">
+            <div class="main_info">
+                <div class="teacher_img_div">
+                    <img src="../../material/img/people/0001.png">
+                </div>
+                <ul class="teacher_info">
+                    <li style="font-weight: 600;font-size: larger">教师名称</li>
+                    <li>擅长</li>
+                    <li>学校</li>
+                    <li>注册时间</li>
+                </ul>
+                <div class="collection">
+                    <img src="../../material/img/people/0001.png">
+                    <!-- 收藏 图片摆放位置-->
+                </div>
+            </div>
+            <div class="intro">
+                <div class="intro_h">
+                    个人简介:
+                </div>
+                <div class="intro_text">
+                    我是个好人我是个好人我是个好人我是个好人我是个好人我是个好人我是个好人我是个好人我是个好人我是个好人我是个好人
+                    我是个好人我是个好人我是个好人我是个好人我是个好人我是个好人我是个好人我是个好人我是个好人我是个好人我是个好人
+                    我是个好人我是个好人我是个好人我是个好人我是个好人我是个好人我是个好人我是个好人我是个好人我是个好人我是个好人
+                </div>
+            </div>
+            <div class="intro_hd" >
+                <div style="margin: 5px 0 5px 5px">
+                    图片展示：
+                </div>
+                <div id="show">
+                    <div id="show_img">
+                        <div><img src="../../material/img/background/a.jpg" ></div>
+                        <div><img src="../../material/img/background/b.jpg" ></div>
+                        <div><img src="../../material/img/background/c.jpg" ></div>
+                        <div><img src="../../material/img/background/d.jpg" ></div>
+                    </div>
+                </div>
+            </div>
+            <div class="time">
+                <!-- 可接受上课时间-->
+                可授课时段：
+                <table style="width: 100%" border="1px">
+                    <tr>
+                        <td>时段\星期</td>
+                        <td>一</td>
+                        <td>二</td>
+                        <td>三</td>
+                        <td>四</td>
+                        <td>五</td>
+                        <td>六</td>
+                        <td>日</td>
+                    </tr>
+                    <tr>
+                        <td>上午</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>下午</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>晚上</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="count">
+                <!-- 上课次数-->
+                总授课次数：
+            </div>
+            <div class="comment">
+                <div class="good">
+                    <h1>好评</h1>
+                </div>
+                <div class="middle">
+                    <h1>中评</h1>
+                </div>
+                <div class="bad">
+                    <h1>差评</h1>
+                </div>
+            </div>
+            <div>课程</div>
+            <div style="display: block;width: 100%;height: 5px">&nbsp</div>
+        </div>
+    </div>
+        <div data-role="footer" data-position="fixed" data-theme="b" id="footer">
+            <div data-role="navbar">
+                <ul>
+                    <li><button data-icon="arrow-l" id="back">返回</button></li>
+                    <li><button data-icon="clock" id="order">预约</button></li>
+                    <li><button data-icon="mail">私信</button></li>
+                    <li><button data-icon="phone" id="phone">联系方式</button></li>
+                </ul>
+            </div>
+        </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.css"/>
+    <link rel="stylesheet" href="">
+
+
+
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js"></script>
+    <script src="http://apps.bdimg.com/libs/angular.js/1.5.0-beta.0/angular.min.js"></script>
+
+    <script src=""></script>
+
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header" ><h1>HEADER</h1></div>
+
+    <div data-role="centent" id="content" data-ng-app="myApp" data-ng-controller="myCtrl" >
+        <input type='checkbox' value='checkbox' id="c"><label for="c">123</label>
+        <button ng-click="toggle()">ClickME</button>
+        <div >
+            <div data-ng-bind="d">
+
+            </div>
+        </div>
+
+
+
+        <script>
+            var app=angular.module('myApp',[]);
+            app.controller('myCtrl', function($scope) {
+                $scope.d = "";
+                $scope.toggle=function(){
+                    $scope.d="<p>CCCCCCC</p>";
+                    $("div").trigger("create");
+                }
+            });
+
+        </script>
+
+    </div>
+    <div data-role="footer"><h1>FOOTER</h1></div>
+
+</div>
+</body>
+</html>

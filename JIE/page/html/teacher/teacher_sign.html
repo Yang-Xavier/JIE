@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width ,height = device-height ,initial-scale = 1,minimum-scale = 1, maximum-scale = 1, user-scalable =no,">
+z    <title>teacher_sign</title>
+
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.css"/>
+    <!--<link rel="stylesheet" href="../../style/download/jquery.mobile-1.4.5.css">-->
+    <link rel="stylesheet" href="../../../style/teacher_sign.css">
+    <link rel="stylesheet" href="">
+
+    <script src="http://apps.bdimg.com/libs/angular.js/1.5.0-beta.0/angular.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js"></script>
+    <script src="../../../script/download/iscroll.js"></script>
+    <script src="../../../script/download/iscroll-probe.js"></script>
+    <script src="../../../script/download/mobileFix.js"></script>
+    <script src="../../../script/download/exif.js"></script>
+    <script src="../../../script/download/LocalResizeIMG.js"></script>
+
+    <script>
+
+        var date_time=new Array();
+
+        $(function() {
+            for(var i=0;i<3;i++){
+                date_time[i]=new Array();
+                for(var j=0;j<7;j++){
+                    date_time[i][j]=0;
+                }
+            }
+            $('#head_img').change(function () {
+                var quality = 0.5;
+                if (judge($(this).val())) {
+                    quality = Math.round(document.getElementById('head_img').files[0].size / 1024);
+                    quality = 100 / quality;
+                    if (quality >= 1) {
+                        quality = 1;
+                    }
+                    localResizeIMG(this.files[0], {
+                        quality: quality
+                    }, function (result) {
+                        console.log(result.base64);
+                        $("#h_img").attr("src", result.base64);
+                    })
+                }
+            });
+            $('#id_card_z').change(function () {
+                if (judge($(this).val())) {
+                    localResizeIMG(this.files[0], {}, function (result) {
+                        $("#id_img_z").attr("src", result.base64);
+                    })
+                }
+            });
+            $('#id_card_f').change(function () {
+                if (judge($(this).val())) {
+                    if (judge($(this).val())) {
+                        localResizeIMG(this.files[0], {}, function (result) {
+                            $("#id_img_f").attr("src", result.base64);
+                        })
+                    }
+                }
+            });
+
+            $('td').click(function(){
+                var h=$(this).parent().prevAll().length-1;//行号
+                var l=$(this).prevAll().length-1;//列
+                if(h!=-1&&l!=-1){
+                    if(date_time[h][l]==0){
+                        date_time[h][l]=1;
+                        $(this).css("background","red");
+                    }
+                    else{
+                        date_time[h][l]=0;
+                        $(this).css("background","white");
+                    }
+                }
+
+            })
+
+            $("#other_c").click(function () {
+                alert($("#other_c").attr("checked"));
+            })
+        });
+        function judge(fileName) {
+            var a = fileName.split(".");
+            var lsn = a[a.length - 1].toUpperCase();
+            if (lsn == "PNG" || lsn == "JPG" || lsn == "JPEG" || lsn == "BMP" || lsn == "GIF") {
+                return true;
+            }
+            else {
+                alert("请选择正确图片格式！");
+                return false;
+            }
+        }
+
+    </script>
+
+
+</head>
+<body>
+<div data-role="page" id="pageone">
+    <div data-role="header" data-theme="b" id="header">
+        <h1>教师注册</h1>
+    </div>
+    <div data-role="content" id="content">
+        <div>
+            <div class="input_d">
+                <label for="head_imgd">上传头像(本人真实头像)：</label>
+                <div id="head_imgd">
+                    <div id="head_img_border" class="img_border h_img_mask">
+                        <img src="../../../material/img/people/0001.png" id="h_img">
+                    </div>
+                    <div class="btn_div">
+                        <button onclick="$('#head_img').click()" class="head_img_btn btn">
+                            <div style="line-height: 0px">浏览..</div>
+                        </button>
+                        <div style="display: none;">
+                            <input type="file" id="head_img" name="head_img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="input_d">
+                <label for="tname">真实姓名：</label>
+                <input type="text" id="tname">
+            </div>
+            <div class="input_d">
+                <label for="id_card">身份证号码：</label>
+                <input type="text" id="ID_card">
+            </div>
+            <div class="input_d">
+                <label>身份证照片(正反两面)</label>
+                <label>正面：</label>
+                <div>
+                    <div class="img_border">
+                        <img src="../../../material/img/people/0001.png" id="id_img_z">
+                    </div>
+                    <div class="btn_div">
+                        <button onclick="$('#id_card_z').click()" class="btn id_btn">
+                            <div style="line-height: 0px">浏览..</div>
+                        </button>
+                        <div style="display: none;">
+                            <input type="file" id="id_card_z" name="id_card_z">
+                        </div>
+                    </div>
+                </div>
+                <label>反面：</label>
+                <div >
+                    <div class="img_border">
+                        <img src="../../../material/img/people/0001.png" id="id_img_f">
+                    </div>
+                    <div class="btn_div">
+                        <button onclick="$('#id_card_f').click()" class="btn id_btn">
+                            <div style="line-height: 0px">浏览..</div>
+                        </button>
+                        <div style="display: none;">
+                            <input type="file" id="id_card_f" name="id_card_f">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="input_d">
+                <label>擅长</label>
+                <fieldset data-role="controlgroup">
+                    <label for="other_c">其它</label>
+                    <input type="checkbox" name="" id="other_c">
+                </fieldset>
+            </div>
+            <div class="input_d" style="display: none">
+                <input type="text" placeholder="其它..">
+            </div>
+            <div class="input_d">
+                <label>可接受上课区域：</label>
+                <select>
+                    <option></option>
+                </select>
+            </div>
+            <div class="input_d">
+                <label>请选择可接受上课时间：</label>
+                <table style="width: 100%" border="1px">
+                    <tr>
+                        <td>时段\星期</td>
+                        <td>一</td>
+                        <td>二</td>
+                        <td>三</td>
+                        <td>四</td>
+                        <td>五</td>
+                        <td>六</td>
+                        <td>日</td>
+                    </tr>
+                    <tr>
+                        <td>上午</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>下午</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>晚上</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="input_d">
+                <label>自我介绍：</label>
+                <textarea></textarea>
+            </div>
+            <div class="input_d">
+                <label>请上传一组本人照片(也可以是才艺展示图片)：</label>
+                <div></div>
+                <div class="btn_div">
+                    <button onclick="$('#id_card_z').click()" class="btn id_btn"">
+                        <div style="line-height: 0px">浏览..</div>
+                    </button>
+                    <div style="display: none;">
+                        <input type="file" id="" name="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed" data-theme="b" id="footer">
+        <div data-role="navbar">
+            <ul>
+                <li><button data-icon="arrow-l"  id="reserve2">取消</button></li>
+                <li></li>
+                <li></li>
+                <li><button data-icon="check"  id="sub">提交审核</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

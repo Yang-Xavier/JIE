@@ -1,0 +1,149 @@
+#header{
+    z-index: 1000;
+}
+
+/********iscroll**************/
+#scroll{
+    z-index:1;
+    width:100%;
+    /*height:700px;*/
+    overflow:hidden;
+    /*background-color: yellow;*/
+}
+
+/********iscroll**************/
+/******left_content**********/
+#content{
+    z-index:1;
+    width:100%;
+    /*height:700px;*/
+    overflow:hidden;
+}
+/*********right_content****************/
+#right_content{
+    z-index:1;
+    width:100%;
+    /*height:700px;*/
+    overflow:hidden;
+    background-color: gray;
+}
+/************cover**********************/
+#cover{
+    display: none;
+    width: 60%;
+    position: absolute;
+    background-color: gray;
+    opacity: 0;
+    z-index:5;
+}
+
+/*************adv*****************/
+.adv_d{
+    display: block;
+    width: 100%;
+    height: 200px;
+    background-color: yellow;
+    position: relative;
+    margin-top: 0;
+    padding-top: 0;
+    overflow: hidden;
+    z-index:0;
+}
+
+.adv{
+    /*position:absolute;*/
+    width: 100%;
+    height: 100%;
+}
+
+.adv_di{
+    display: block;
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+.adv_box{
+    margin:170px 0 0  0;
+    padding-top:0 ;
+    width:100%;
+    height:10px;
+    text-align:center;
+    z-index: 1000;
+    position: absolute;
+}
+
+.adv_nav ul {
+    list-style-type: none;
+    width:100%;
+    height:100%;
+
+}
+.adv_nav li {
+    float:right;
+    display:inline-block;
+    width:10px;
+    height: 10px;
+    background:#ccc;
+    margin-right: 5px;
+}
+/*************adv*****************/
+/************add_info******************/
+.add_info{
+    /*border: 1px solid black*/
+}
+
+.people_block {
+    width:100%;
+    height: 100px;
+    margin-bottom: 2px;
+    /*border: 1px solid black;*/
+    border-bottom: 1px solid black;
+    /*background-color: red;*/
+    overflow: hidden;
+    /*float: left;*/
+}
+.people-img-div{
+    -webkit-mask: url(../material/img/other/mask_ciecle.png) no-repeat;
+    -webkit-mask-size: 90px 90px;
+    -webkit-mask-position: 5px 5px;
+    display:inline-block;
+    height: 100px;
+    width: 100px;
+}
+.people-img-div img{
+    margin: 5px;
+    width: 90px;
+    height: 90px;
+}
+
+.people-info-div{
+    margin-top: 5px;
+    display:inline-block;
+    position: absolute;
+    overflow: hidden;
+    /*border: 1px solid black;*/
+
+}
+.people_name{
+    /*border: 1px solid black;*/
+    display: block;
+    margin-top: 3px;
+    /*width: 50%;*/
+    height: 25px;
+    font-weight: 600;
+    /*border-bottom: 1px solid black;*/
+    /***font-size: ;字体大小***/
+    /**color: ;设置字体颜色**/
+}
+.people_intro{
+    /*border: 1px solid black;*/
+    margin-top: 5px;
+    width: 95%;
+    height: 50px;
+    /***font-size: ;字体大小***/
+    /**color: ;设置字体颜色**/
+}
+
+/************add_info******************/

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width ,height = device-height ,initial-scale = 1,minimum-scale = 1, maximum-scale = 1, user-scalable =no,">
+    <title>accept_order</title>
+
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.css"/>
+    <link rel="stylesheet" href="../../../style/download/jquery.mobile-1.4.5.css">
+    <link rel="stylesheet" href="">
+
+    <script src="http://apps.bdimg.com/libs/angular.js/1.5.0-beta.0/angular.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js"></script>
+    <script src="../../../script/download/iscroll.js"></script>
+    <script src="../../../script/download/iscroll-probe.js"></script>
+    <script src=""></script>
+
+
+    <style type="text/css">
+        div{display: block;width: 100%;margin: 0;position: relative;}
+        .boxed{
+            height: 100px;
+            margin-bottom: 2px;
+            border: 1px solid black
+        }
+        .left_content{
+            position: absolute;
+            width: 80%;
+            height: 100px;
+            /*background-color:  red*/
+        }
+        .right_content{
+            text-align: center;
+            position: absolute;
+            margin-left:80%;
+            width: 20%;
+            height: 100px;
+            /*background-color: blue*/
+        }
+        .accept_btn{
+            width:100%;
+            height: 50px;
+            /*background-color: black*/
+        }
+        .refuse_btn{
+            width:100%;
+            height: 50px;
+            /*background-color: palevioletred*/
+        }
+        .accept_btn button,.refuse_btn button{
+            position: absolute;
+            margin-top: 0;
+            /*font-size: 20px;*/
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<div data-role="page" id="pageone">
+    <div data-role="header" data-theme="b" id="header">
+        <h1>预约管理</h1>
+    </div>
+    <div id="content">
+        <div class="boxed">
+            <a href="#" >
+                <div class="left_content">
+                    <div>用户</div>
+                    <div>课程名字</div>
+                    <div>地点</div>
+                    <div>时间</div>
+                    <div>价格</div>
+                </div>
+            </a>
+                <div class="right_content">
+                    <div class="accept_btn">
+                        <button data-corners="false">接受</button>
+                    </div>
+                    <div class="refuse_btn"data-role="none">
+                        <button data-corners="false" data-theme="b">拒绝</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed" data-theme="b" id="footer">
+        <div data-role="navbar">
+            <ul>
+                <li><button data-icon="arrow-l" id="back">返回</button></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

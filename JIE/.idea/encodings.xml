@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Test/LocalResizeIMG.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Test/exif.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Test/mobileFix.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Test/model.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/material/json/schoolName.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/script/download/LocalResizeIMG.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/script/download/exif.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/script/download/mobileFix.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/script/forget.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/script/login.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/script/main.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/script/personal_info.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/script/search_course.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/script/sign.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/script/standard.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/script/teacher_info.js" charset="UTF-8" />
+  </component>
+</project>

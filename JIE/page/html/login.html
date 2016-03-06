@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width ,height = device-height ,initial-scale = 1,minimum-scale = 1, maximum-scale = 1, user-scalable =no,">
+    <title>login</title>
+
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.css"/>
+    <link rel="stylesheet" href="../../style/download/jquery.mobile-1.4.5.css">
+    <link rel="stylesheet" href="">
+
+    <script src="../../script/download/MD5.js"></script>
+    <script src="http://apps.bdimg.com/libs/angular.js/1.5.0-beta.0/angular.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js"></script>
+    <script src="../../script/download/angular.min.js"></script>
+    <script src="../../script/download/2.1.4.jquery.js"></script>
+    <script src="../../script/download/jquery.mobile-1.4.5.js"></script>
+    <script src="../../script/login.js"></script>
+    <script src=""></script>
+</head>
+<body>
+<div data-role="page" id="">
+    <div data-role="header" data-theme="b" id=""><h1>请先登录！</h1></div>
+    <div id="" data-role="content">
+        <label for="userName">用户名</label>
+        <input type="text" id="userName" >
+        <label for="password">密码</label>
+        <input type="password" id="password" >
+        <div class="ui-grid-b" id="code" style="display: none">
+            <div class="ui-block-a"></div>
+            <div class="ui-block-b">
+                <img src="">
+            </div>
+            <div class="ui-block-c">
+                <input type="text" placeholder="请输入验证码!">
+            </div>
+        </div>
+        <button id="login">登录！</button>
+        <button id="sign" >注册！</button>
+        <button id="forget" style="display: none; color:blue">忘记密码？</button>
+        <div id="msg" style="color: red;font-weight: 600;text-align: center"></div>
+    </div>
+    <div data-role="footer" data-position="fixed" data-theme="b">
+        <div data-role="navbar">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li><button data-icon="eye" id="touristBtn" >游客登录！</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

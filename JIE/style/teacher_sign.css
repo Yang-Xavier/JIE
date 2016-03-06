@@ -1,0 +1,47 @@
+div{
+    display: block;
+    /*width:100%;*/
+}
+.input_d{
+    position: relative;
+    margin-top: 5px;
+}
+.img_border,.btn_div{
+    display: inline-block;
+
+}
+.img_border{
+    height: auto;
+}
+.img_border img{
+    width:120px;
+    height: 90px;
+}
+.h_img_mask{
+    -webkit-mask: url(../material/img/other/mask_ciecle.png) no-repeat;
+    -webkit-mask-size: 100px 100px;
+    -webkit-mask-position: 0px 0px;
+    width: 100px;
+    height: 100px;
+}
+.h_img_mask img{
+    width:100px;
+    height: 100px;
+}
+
+.btn_div{
+    width: 100px;
+    position: absolute;
+}
+.head_img_btn{
+    margin-top: 70px;
+    margin-left: 5px;
+}
+.btn{
+    height: 30px;
+    width: 50px;
+}
+.id_btn{
+    margin-top: 60px;
+    margin-left: 5px;
+}

@@ -1,0 +1,38 @@
+.ui-grid-p1{
+    width: 100%;
+    overflow: hidden;
+}
+.ui-grid-p1>.ui-block-pa{
+    width: 74.5%;
+}
+.ui-grid-p1>.ui-block-pb{
+    margin-left: 2px;
+    width: 24.5%;
+}
+.ui-block-pa,.ui-block-pb{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    float: left;
+    display:inline;
+    min-height: 1px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.ui-block-pa{
+    clear: left;
+}
+
+/******************page1******************/
+
+/******************page2******************/
+.other{
+    display: none;
+}
+.school{
+    display: block;
+}
+/******************page3******************/
+
+

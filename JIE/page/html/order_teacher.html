@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width ,height = device-height ,initial-scale = 1,minimum-scale = 1, maximum-scale = 1, user-scalable =no,">
+    <title>order_teacher</title>
+
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.css"/>
+    <link rel="stylesheet" href="../../style/download/jquery.mobile-1.4.5.css">
+    <link rel="stylesheet" href="">
+
+    <script src="http://apps.bdimg.com/libs/angular.js/1.5.0-beta.0/angular.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js"></script>
+    <script src="../../script/download/iscroll.js"></script>
+    <script src="../../script/download/iscroll-probe.js"></script>
+    <script src=""></script>
+
+</head>
+<body>
+<div data-role="page" id="pageone">
+    <div data-role="header" data-theme="b" id="header">
+        <h1>选择预约日期</h1>
+    </div>
+    <div data-role="content" id="content">
+        <div style="text-align: center">
+            <h1>预约：家教名字</h1>
+        </div>
+        <form id="order_form">
+            <label>日期：</label>
+            <input type="date">
+            <label>时间：</label>
+            <input type="time">
+            <label>持续时间</label>
+            <select>
+                <option>一小时</option>
+                <option>两小时</option>
+                <option>三小时</option>
+                <option>其他</option>
+            </select>
+            <label>科目：</label>
+            <select>
+                <option>其他</option>
+            </select>
+            <label>酬劳：（元/小时）</label>
+            <input type="number">
+        </form>
+    </div>
+    <div data-role="footer" data-position="fixed" data-theme="b" id="footer">
+        <div data-role="navbar">
+            <ul>
+                <li><button data-icon="arrow-l" id="back">返回</button></li>
+                <li></li>
+                <li></li>
+                <li><button data-icon="check" id="sub">提交</button></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        $("#back").click(function(){
+            history.go(-1);
+        });
+    </script>
+</div>
+
+</body>
+</html>

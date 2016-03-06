@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width ,height = device-height ,initial-scale = 1,minimum-scale = 1, maximum-scale = 1, user-scalable =no,">
+    <title>main</title>
+
+    <!--<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.css"/>-->
+    <link rel="stylesheet" href="../style/download/jquery.mobile-1.4.5.css"/>
+    <link rel="stylesheet" href="../style/main.css"/>
+    <link rel="stylesheet" href=""/>
+
+    <!--<script src="http://apps.bdimg.com/libs/angular.js/1.5.0-beta.0/angular.min.js"></script>-->
+    <!--<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>-->
+    <!--<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js"></script>-->
+    <script src="../script/download/angular.min.js"></script>
+    <script src="../script/download/2.1.4.jquery.js"></script>
+    <script src="../script/download/jquery.mobile-1.4.5.js"></script>
+    <script src="../script/download/iscroll.js"></script>
+    <script src="../script/download/iscroll-probe.js"></script>
+    <script src="../script/main.js"></script>
+    <script src=""></script>
+    <script>
+        var a=true;
+        function more(){
+            if(a){
+                $('#m').animate({left:'60%'});
+                $('#c').animate({left:'-40%'});
+                a=!a;
+            }else{
+                $('#m').animate({left:'140%'});
+                $('#c').animate({left:'0%'});
+                a=!a;
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+
+<div data-role="page" id="pageone">
+    <div id="more_" style="display: inline-block;width:40%;position: absolute;margin-top: 20%;left: 140%;background: black">
+        <div >
+            <div>
+                <button>
+                    个人资料
+                </button>
+            </div>
+            <div >
+                <button>
+                    解答专区
+                </button>
+            </div>
+            <div >
+                <button>
+                    收藏夹
+                </button>
+            </div>
+            <div >
+                <button>
+                    会员专区
+                </button>
+            </div>
+            <div >
+                <button>
+                    近期活动
+                </button>
+            </div>
+            <div >
+                <button>
+                    宝贵意见
+                </button>
+            </div>
+            <div >
+                <button>
+                    加入我们
+                </button>
+            </div>
+            <div>
+                <button style="color: blue">
+                    教师入口
+                </button>
+            </div>
+            <div>
+                <button style="color: red">
+                    退出登录
+                </button>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div data-role="header" data-theme="b" id="header" >
+        <h1>解</h1>
+    </div>
+    <!-- content-->
+    <div style="display: inline-block;width: 100%;position: absolute;" id="c">
+    <div id="content">
+        <div id="wrap">
+            <div id="down_refresh"></div>
+            <div class="adv_d" id="adv_img">
+                <div id="adv_1" class="adv_di">
+                    <img  class="adv" src="../material/img/background/1.jpg" >
+                </div>
+                <div id="adv_2" class="adv_di">
+                    <img  class="adv" src="../material/img/background/2.jpg" >
+                </div>
+                <div id="adv_3" class="adv_di">
+                    <img  class="adv" src="../material/img/background/3.jpg" >
+                </div>
+                <div class="adv_box">
+                    <ul class="adv_nav">
+                        <li id="al1"></li>
+                        <li id="al2"></li>
+                        <li id="al3"></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="display: block;height: 3px;background-color: black"></div>
+            <div class="add_info" id="add_info">
+                <div class='people_block' >
+                    <div class='people-img-div'><img src='../material/img/people/0001.png'></div>
+                    <div class='people-info-div'>
+                        <div class='people_name'>教师名字</div>
+                        <div style="display: block;width: 50%;height: 2px;background:black"></div>
+                        <div class='people_intro'>
+                            教师简介教师简介教师简介教师简介教师简介教师简介
+                            教师简介教师简介教师简介教师简介教师简介教师简介
+                        </div>
+                        <div class='people_tag'></div>
+                    </div>
+                </div>
+                <div class="people_block" >
+                    <div class="people-img-div"><img src="../material/img/people/0001.png"></div>
+                    <div class="people-info-div" >
+                        <div class="people_name">教师名字</div>
+                        <div class="people_intro">教师简介教师简介教师简介教师简介教师简介教师简介</div>
+                        <div class="people_tag"></div>
+                    </div>
+                </div><div class="people_block" >
+                <div class="people-img-div"><img src="../material/img/people/0001.png"></div>
+                <div class="people-info-div" >
+                    <div class="people_name">教师名字</div>
+                    <div class="people_intro">教师简介教师简介教师简介教师简介教师简介教师简介</div>
+                    <div class="people_tag"></div>
+                </div>
+            </div><div class="people_block" >
+                <div class="people-img-div"><img src="../material/img/people/0001.png"></div>
+                <div class="people-info-div" >
+                    <div class="people_name">教师名字</div>
+                    <div class="people_intro">教师简介教师简介教师简介教师简介教师简介教师简介</div>
+                    <div class="people_tag"></div>
+                </div>
+            </div><div class="people_block" >
+                <div class="people-img-div"><img src="../material/img/people/0001.png"></div>
+                <div class="people-info-div" >
+                    <div class="people_name">教师名字</div>
+                    <div class="people_intro">教师简介教师简介教师简介教师简介教师简介教师简介</div>
+                    <div class="people_tag"></div>
+                </div>
+            </div>
+            </div>
+            <div style="display:block;">
+                <button id="cli_more">点击加载更多</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- footer-->
+    <div data-role="footer" data-position="fixed" data-theme="b" id="footer">
+        <div data-role="navbar">
+            <ul>
+                <li><button data-icon="arrow-l"  style="background-color: black">主页</button></li>
+                <li><button data-icon="arrow-l"  >搜课程</button></li>
+                <li><button data-icon="arrow-r"  >我的课程</button></li>
+                <li><button data-icon="arrow-r"  onclick="more()">更多</button></li>
+            </ul>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>
+
+
